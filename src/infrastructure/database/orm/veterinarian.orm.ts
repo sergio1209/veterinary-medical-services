@@ -5,7 +5,7 @@ export class VeterinarianOrm{
   @ObjectIdColumn()
   _Id: ObjectID;
   @Column()
-  public id: number;
+  public id: string;
   @Column()
   public name: string;
   @Column()
