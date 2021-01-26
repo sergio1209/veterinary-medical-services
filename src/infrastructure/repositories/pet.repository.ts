@@ -10,7 +10,7 @@ export class PetRepository extends GenericRepository<PetOrm>{
 
   public MapOrmToEntity(orm: PetOrm): Pet{
     const pet: Pet = new Pet();
-    pet._Id= orm._Id;
+    pet._Id= orm._id;
     pet.ownerId= orm.ownerId;
     pet.age= orm.age;
     pet.gender=orm.gender;
@@ -21,7 +21,7 @@ export class PetRepository extends GenericRepository<PetOrm>{
   }
   public static mapEntityToOrm(entity: Pet): PetOrm{
     const orm: PetOrm = new PetOrm();
-    orm._Id=entity._Id;
+    orm._id=entity._Id;
     orm.ownerId= entity.ownerId;
     orm.age= entity.age;
     orm.gender=entity.gender;

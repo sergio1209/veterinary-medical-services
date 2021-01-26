@@ -11,7 +11,7 @@ export class ClientRepository extends GenericRepository<ClientOrm>{
 
   public MapOrmToEntity(orm: ClientOrm): Person{
     const client: Person = new Client();
-    client._Id= orm._Id;
+    client._Id= orm._id;
     client.id= orm.id;
     client.name = orm.name;
     client.numberTelephone = orm.numberTelephone;
@@ -20,7 +20,7 @@ export class ClientRepository extends GenericRepository<ClientOrm>{
   }
   public static mapEntityToOrm(entity: Person): ClientOrm{
     const orm: ClientOrm = new ClientOrm();
-    orm._Id= entity._Id;
+    orm._id= entity._Id;
     orm.id= entity.id;
     orm.name = entity.name;
     orm.numberTelephone = entity.numberTelephone;

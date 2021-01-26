@@ -11,7 +11,7 @@ export class VeterinarianRepository extends GenericRepository<VeterinarianOrm>{
 
   public MapOrmToEntity(orm: VeterinarianOrm): Person{
     const veterinarian: Veterinary = new Veterinary();
-    veterinarian._Id= orm._Id;
+    veterinarian._Id= orm._id;
     veterinarian.id= orm.id;
     veterinarian.name = orm.name;
     veterinarian.numberTelephone = orm.numberTelephone;
@@ -22,7 +22,7 @@ export class VeterinarianRepository extends GenericRepository<VeterinarianOrm>{
   }
   public static mapEntityToOrm(entity: Veterinary): VeterinarianOrm{
     const orm: VeterinarianOrm = new VeterinarianOrm();
-    orm._Id= entity._Id;
+    orm._id= entity._Id;
     orm.id= entity.id;
     orm.name = entity.name;
     orm.numberTelephone = entity.numberTelephone;

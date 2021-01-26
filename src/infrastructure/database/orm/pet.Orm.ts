@@ -4,7 +4,7 @@ import { Column, Entity, ObjectID, ObjectIdColumn } from 'typeorm';
 export class PetOrm{
 
   @ObjectIdColumn()
-  _Id: ObjectID;
+  _id: ObjectID;
   @Column()
   public ownerId: string;
   @Column()

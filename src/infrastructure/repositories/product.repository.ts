@@ -11,7 +11,7 @@ export class ProductRepository extends GenericRepository<ProductOrm>{
 
   public MapOrmToEntity(orm: ProductOrm): Product{
     const product: Product = new Product();
-    product._Id= orm._Id;
+    product._Id= orm._id;
    product.brand= orm.brand;
    product.code=orm.code;
    product.price= orm.price;
@@ -20,7 +20,7 @@ export class ProductRepository extends GenericRepository<ProductOrm>{
   }
   public static mapEntityToOrm(entity: Product): ProductOrm{
     const orm: ProductOrm = new ProductOrm();
-    orm._Id= entity._Id;
+    orm._id= entity._Id;
     orm.brand= entity.brand;
     orm.code=entity.code;
     orm.price= entity.price;
